@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    tools:context="com.saad.youssif.alsalonalmalaky.SendingRequest">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/request_msgCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="طلب جديد"
+                        android:textSize="30sp"
+                        android:textColor="#424242"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        />
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        app:cardBackgroundColor="#e9ebea"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#e9ebea">
+
+                            <EditText
+                                android:id="@+id/descEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="@dimen/font_size_textViews"
+                                android:hint="أدخل هنا معلومات الطلب"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                />
+                        </RelativeLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        app:cardBackgroundColor="#e9ebea"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="10dp"
+                        android:id="@+id/dateEtCardView"
+                        android:layout_centerHorizontal="true"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:id="@+id/dayPickerTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="تاريخ الحجز"
+                                android:textSize="@dimen/font_size_textViews"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="#424242"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true" />
+
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="110dp"
+                        android:layout_height="40dp"
+                        app:cardBackgroundColor="#10bbb3"
+                        app:cardCornerRadius="25dp"
+                        app:cardElevation="10dp"
+                        android:id="@+id/sendRequestCardView"
+                        android:layout_centerHorizontal="true"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <TextView
+                                android:id="@+id/sendRequestBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="@dimen/font_size_textViews"
+                                android:layout_gravity="center"
+                                android:text="حجز"
+                                android:textColor="@color/White"
+                                android:gravity="center"
+
+                                />
+                        </RelativeLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

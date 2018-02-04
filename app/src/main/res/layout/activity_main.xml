@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#f1f5f8"
+    android:layout_weight="1"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:titleMarginBottom="5dp"
+            android:paddingBottom="5dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerRequests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/imgs_layout"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/White"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/myMsgImg"
+            android:layout_width="@dimen/main_images_width"
+            android:layout_height="@dimen/main_images_height"
+            android:src="@drawable/my_msg"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            />
+        <ImageView
+            android:id="@+id/sendImg"
+            android:layout_width="@dimen/main_images_width"
+            android:layout_height="@dimen/main_images_height"
+            android:src="@drawable/snd"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+
+            />
+        <ImageView
+            android:id="@+id/profileImg"
+            android:layout_width="@dimen/main_images_width"
+            android:layout_height="@dimen/main_images_height"
+            android:src="@drawable/prfil"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/settingImg"
+            android:layout_width="@dimen/main_images_width"
+            android:layout_height="@dimen/main_images_height"
+            android:src="@drawable/stng"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

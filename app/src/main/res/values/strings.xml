@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">الصالون الملكي </string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="salon_name">مركز تجميل الصالون الملكي</string>
+    <string name="salon_address">العنوان : سوق المجاورة الرابعة حي ثاني بجوار بيت الطالبات (المدينه الجامعيه)</string>
+    <string name="salon_phone">رقم الهاتف : 01090930793</string>
+    <string name="facebook_account">فيس بوك : الصالون الملكي بدمياط الجديدة</string>
+    <string name="instrgram_account">انستجرام :Alsalon_almalaky_barber</string>
+    <string name="twitter_account">تويتر : Alsalonalmalaky</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+
+</resources>

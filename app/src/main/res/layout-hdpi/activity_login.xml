@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    tools:context="com.saad.youssif.alsalonalmalaky.Login">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center"
+            >
+            <android.support.v7.widget.CardView
+                android:id="@+id/rgstCardView"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="#10bbb3"
+                app:cardCornerRadius="15dp"
+                android:layout_gravity="right"
+                app:cardElevation="@dimen/register_cards_elvation"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="1dp"
+                        android:gravity="center"
+                        android:text="التسجيل"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/font_size_textViews" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                app:srcCompat="@drawable/logo2"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="@dimen/register_cards_width"
+                android:layout_height="@dimen/register_cards_height"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="@dimen/register_cards_elvation"
+                android:id="@+id/emailCardView"
+                android:background="@color/White"
+                android:layout_marginBottom="5dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/White"
+                    >
+
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/White"
+                        android:ems="10"
+                        android:hint="إسم العميل"
+                        android:inputType="textPersonName"
+                        android:textAlignment="center"
+                        android:textColor="#10bbb3"
+                        android:textSize="@dimen/font_size_textViews"
+                        android:textStyle="bold"
+                        />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="@dimen/register_cards_width"
+                android:layout_height="@dimen/register_cards_height"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="@dimen/register_cards_elvation"
+                android:id="@+id/passwordCardView"
+                android:background="@color/White"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/White">
+
+                    <EditText
+                        android:id="@+id/editText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="كلمة المرور"
+                        android:textStyle="bold"
+                        android:textColor="#339988"
+                        android:textSize="@dimen/font_size_textViews"
+                        android:inputType="textPassword"
+                        android:textAlignment="center"
+                        android:background="@color/White" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="@dimen/register_cards_width"
+                android:layout_height="@dimen/register_cards_height"
+                app:cardBackgroundColor="#10bbb3"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="@dimen/register_cards_elvation"
+                android:layout_marginTop="5dp"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:elevation="1dp"
+                        android:gravity="center"
+                        android:text="تسجيل دخول "
+                        android:textAlignment="center"
+                        android:textColor="@color/White"
+                        android:textSize="@dimen/font_size_textViews"
+                        />
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+</LinearLayout>
