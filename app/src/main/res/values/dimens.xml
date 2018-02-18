@@ -7,14 +7,14 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="salon_padding_right">5dp</dimen>
     <dimen name="salon_padding_left">5dp</dimen>
-    <dimen name="font_size_textViews">20sp</dimen>
-    <dimen name="register_cards_width">230dp</dimen>
-    <dimen name="register_cards_height">60dp</dimen>
+    <dimen name="font_size_textViews">17sp</dimen>
+    <dimen name="register_cards_width">200dp</dimen>
+    <dimen name="register_cards_height">30dp</dimen>
     <dimen name="register_cards_elvation">3dp</dimen>
     <dimen name="main_images_width">40dp</dimen>
     <dimen name="main_images_height">40dp</dimen>
-    <dimen name="register_cards_width_hdpi">210dp</dimen>
-    <dimen name="register_cards_height_hdpi">50dp</dimen>
+    <dimen name="register_cards_width_hdpi">200dp</dimen>
+    <dimen name="register_cards_height_hdpi">30dp</dimen>
 
 
 </resources>

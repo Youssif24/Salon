@@ -128,10 +128,11 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        myMsgImgView.setOnClickListener(new View.OnClickListener() {
+       myMsgImgView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,MainActivity.class));
+                MainActivity.this.finish();
             }
         });
 
@@ -194,6 +195,12 @@ public class MainActivity extends AppCompatActivity
                 editor.clear().commit();
                 startActivity(new Intent(MainActivity.this, Login.class));
                 MainActivity.this.finish();
+                return true;
+            case R.id.suggest_option:
+                startActivity(new Intent(MainActivity.this,SuggestionActivity.class));
+                return true;
+            case R.id.salon_details_option:
+                startActivity(new Intent(MainActivity.this,SalonDetails.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -404,6 +411,10 @@ public class MainActivity extends AppCompatActivity
         type = shrd.getString("type", "0");
         if (type.equals("user")) {
             setTitle("الطلبات المرسله : ");
+        }
+        else
+        {
+            sendImg.setVisibility(View.GONE);
         }
     }
 

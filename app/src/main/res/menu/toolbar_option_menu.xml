@@ -2,17 +2,32 @@
 <menu xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:id="@+id/salon_details_option"
+            android:checkable="false"
+            android:title="تفاصيل الصالون"
+            android:visible="true"></item>
+        <item
+            android:id="@+id/suggest_option"
+            android:checkable="false"
+            android:title="إقتراحات"
+            android:visible="true"></item>
         <item
             android:id="@+id/share_location_option"
             android:title="توصيل uber "
             android:visible="true"
             app:showAsAction="never"></item>
 
+
         <item
             android:id="@+id/logout_option"
             android:checkable="false"
             android:title="تسجيل خروج"
             android:visible="true"></item>
+
+
+
 
 
 </menu>

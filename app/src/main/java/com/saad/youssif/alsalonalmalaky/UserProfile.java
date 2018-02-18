@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,7 +37,10 @@ public class UserProfile extends AppCompatActivity {
     ConnectivityManager connectivityManager;
     SharedPreferences shrd;
     Switch mSwitch;
+    EditText newPassEditText;
     public static final String USER_PROFILE_DATA_URL = "https://youssifsaad96.000webhostapp.com/get_profile.php";
+    public static final String UPDATE_USER_PASSWORD_URL = "https://youssifsaad96.000webhostapp.com/update_user_password.php";
+
 
 
     @Override
@@ -52,6 +56,7 @@ public class UserProfile extends AppCompatActivity {
         profile_phoneTv=(TextView)findViewById(R.id.profile_phoneTv);
         profile_typeTv=(TextView)findViewById(R.id.profile_typeTv);
         changePassTv=(TextView)findViewById(R.id.profile_changePassTv);
+        newPassEditText=(EditText)findViewById(R.id.newPassEditText);
         connectivityManager= (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         shrd=getSharedPreferences("UserLogin",this.MODE_PRIVATE);
         mSwitch=(Switch) findViewById(R.id.switch1);
@@ -72,11 +77,20 @@ public class UserProfile extends AppCompatActivity {
         changePassTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(UserProfile.this,UpdatePassword.class));
+                if(newPassEditText.getText().toString().isEmpty())
+                {
+                    newPassEditText.setError("ادخل كلمة السر الجديده");
+                }
+                else {
+                    updatePassword();
+                }
+
             }
         });
 
     }
+
+
 
 
     public void getSwitchState()
@@ -91,6 +105,74 @@ public class UserProfile extends AppCompatActivity {
         {
             editor.putString("switchState","false").commit();
         }
+
+    }
+
+
+    public void updatePassword()
+    {
+        progressDialog.setMessage("جاري التحديث.....");
+        progressDialog.show();
+        StringRequest stringRequest = new StringRequest(com.android.volley.Request.Method.POST, UPDATE_USER_PASSWORD_URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if (response.equals("Success")) {
+                    newPassEditText.setText("");
+                    progressDialog.dismiss();
+                    Toast.makeText(UserProfile.this,"تم تغيير كلمة المرور",Toast.LENGTH_LONG).show();
+
+                }
+                else
+                {
+                    progressDialog.dismiss();
+                    Toast.makeText(UserProfile.this,"من فضلك حاول مره اخري",Toast.LENGTH_LONG).show();
+                }
+
+
+            }
+
+
+        }
+                , new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+
+            }
+
+
+        }
+
+        ) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> mapData = new HashMap<>();
+                mapData = new HashMap<>();
+                SharedPreferences.Editor editor=shrd.edit();
+                String user_id=shrd.getString("id","0");
+                mapData.put("user_id",user_id);
+                mapData.put("password",newPassEditText.getText().toString().trim());
+                return mapData;
+
+            }
+        };
+        stringRequest.setRetryPolicy(new RetryPolicy() {
+            public int getCurrentTimeout() {
+                return 50000;
+            }
+
+            @Override
+            public int getCurrentRetryCount() {
+                return 10000;
+            }
+
+            @Override
+            public void retry(VolleyError error) throws VolleyError {
+
+            }
+        });
+        RequestQueue requestQueue = Volley.newRequestQueue(UserProfile.this);
+        requestQueue.add(stringRequest);
 
     }
 
@@ -114,8 +196,7 @@ public class UserProfile extends AppCompatActivity {
                             if (!(jsonArray.isNull(0))) {
                                 JSONObject user_object = jsonArray.getJSONObject(0);
                                 profile_usernameTv.setText(user_object.getString("username"));
-                                profile_phoneTv.setText(profile_phoneTv.getText().toString()+user_object.getString("phone"));
-                                profile_typeTv.setText(profile_typeTv.getText().toString()+user_object.getString("type"));
+                                profile_phoneTv.setText(user_object.getString("phone"));
                                 progressDialog.dismiss();
 
                             }

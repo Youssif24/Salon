@@ -21,6 +21,7 @@
 
 
 
+
             <android.support.v7.widget.CardView
                 android:id="@+id/salon_details_cardView"
                 android:layout_width="match_parent"
@@ -40,12 +41,14 @@
                     android:layout_gravity="right"
                     android:gravity="center">
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="80dp"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
                         android:src="@drawable/logo2"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         />
+
+
 
                     <TextView
                         android:id="@+id/textView3"
@@ -56,79 +59,144 @@
                         android:textSize="25sp"
                         android:textColor="@color/black"
                         android:textStyle="bold"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginTop="20dp"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="15dp"
+                        android:layout_marginBottom="10dp"
 
                         />
 
-
-                    <TextView
-                        android:id="@+id/profile_usernameTv"
+                    <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/salon_address"
-                        android:textSize="@dimen/font_size_textViews"
-                        android:layout_marginBottom="15dp"
-                        android:layout_marginTop="5dp"
-                        android:paddingRight="5dp"
-                        android:layout_marginRight="5dp"
-                        android:textColor="#424242"
+                        android:id="@+id/details_card"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#f1f5f8"
+                        app:cardBackgroundColor="#f1f5f8"
+                        app:cardCornerRadius="10dp"
+                        >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
 
-                        />
+                            <TextView
+                                android:id="@+id/profile_usernameTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/salon_address"
+                                android:textSize="@dimen/font_size_textViews"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="#424242"
+
+
+                                />
+
+                            <TextView
+                                android:id="@+id/profile_phoneTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/salon_phone"
+                                android:textSize="@dimen/font_size_textViews"
+                                android:layout_marginBottom="5dp"
+                                android:paddingRight="5dp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="#424242"
+
+                                />
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
 
                     <TextView
-                        android:id="@+id/profile_phoneTv"
+                        android:id="@+id/socialTv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/salon_phone"
+                        android:text="التواصل الاجتماعي : "
                         android:textSize="@dimen/font_size_textViews"
                         android:layout_marginBottom="5dp"
                         android:paddingRight="5dp"
                         android:layout_marginRight="5dp"
-                        android:textColor="#424242"
-
-                        />
-                    <TextView
-                        android:id="@+id/salon_facebookTv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/facebook_account"
-                        android:textSize="@dimen/font_size_textViews"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginEnd="8dp"
+                        android:textColor="#10bbb3"
                         android:layout_marginTop="5dp"
-                        android:paddingRight="5dp"
-                        android:textColor="#424242"
-
 
                         />
 
-                    <TextView
-                        android:id="@+id/salon_twitterTv"
+                    <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/twitter_account"
-                        android:textSize="@dimen/font_size_textViews"
-                        android:layout_marginBottom="15dp"
-                        android:paddingRight="5dp"
-                        android:textColor="#424242"
+                        android:id="@+id/social_accounts_card"
+                        android:background="#f1f5f8"
+                        app:cardBackgroundColor="#f1f5f8"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        app:cardCornerRadius="10dp"
+                        >
 
-                        />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#f1f5f8"
+                            >
 
-                    <TextView
-                        android:id="@+id/salon_instagramTv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/instrgram_account"
-                        android:textSize="@dimen/font_size_textViews"
-                        android:layout_marginBottom="15dp"
-                        android:paddingRight="5dp"
-                        android:layout_marginRight="5dp"
-                        android:textColor="#424242"
 
-                        />
+                            <TextView
+                                android:id="@+id/salon_facebookTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/facebook_account"
+                                android:textSize="@dimen/font_size_textViews"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:paddingRight="5dp"
+                                android:textColor="#424242"
+
+
+                                />
+
+                            <TextView
+                                android:id="@+id/salon_twitterTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/twitter_account"
+                                android:textSize="@dimen/font_size_textViews"
+                                android:layout_marginBottom="10dp"
+                                android:paddingRight="5dp"
+                                android:textColor="#424242"
+                                android:layout_marginRight="5dp"
+
+                                />
+
+                            <TextView
+                                android:id="@+id/salon_instagramTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/instrgram_account"
+                                android:textSize="@dimen/font_size_textViews"
+                                android:layout_marginBottom="10dp"
+                                android:paddingRight="5dp"
+                                android:layout_marginRight="5dp"
+                                android:textColor="#424242"
+
+                                />
+
+                        </LinearLayout>
+
+
+
+                    </android.support.v7.widget.CardView>
+
 
                     <RelativeLayout
                         android:orientation="horizontal"
@@ -166,6 +234,8 @@
                                     android:gravity="center"
                                     android:textSize="@dimen/font_size_textViews"
                                     android:layout_alignParentLeft="true"
+                                    android:textStyle="bold"
+
 
                                     />
 
@@ -204,7 +274,10 @@
                                     android:gravity="center"
                                     android:text="توصيل"
                                     android:textColor="#fff"
-                                    android:textSize="@dimen/font_size_textViews" />
+                                    android:textSize="@dimen/font_size_textViews"
+                                    android:textStyle="bold"
+
+                                    />
 
                             </RelativeLayout>
                         </android.support.v7.widget.CardView>

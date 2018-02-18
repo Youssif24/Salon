@@ -15,6 +15,7 @@
     <string name="twitter_account">تويتر : Alsalonalmalaky</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_suggestion">SuggestionActivity</string>
 
 
 </resources>

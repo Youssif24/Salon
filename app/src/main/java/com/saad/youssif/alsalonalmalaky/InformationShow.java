@@ -1,6 +1,7 @@
 package com.saad.youssif.alsalonalmalaky;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,10 +9,19 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class InformationShow extends Activity {
 
     TextView info_username,info_phone,info_reply;
     LinearLayout info_layout,reply_layout;
+
+
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

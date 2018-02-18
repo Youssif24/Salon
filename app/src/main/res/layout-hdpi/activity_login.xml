@@ -21,8 +21,8 @@
             >
             <android.support.v7.widget.CardView
                 android:id="@+id/rgstCardView"
-                android:layout_width="100dp"
-                android:layout_height="60dp"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
                 android:layout_marginBottom="5dp"
                 android:layout_marginTop="15dp"
                 app:cardBackgroundColor="#10bbb3"
@@ -46,7 +46,9 @@
                         android:gravity="center"
                         android:text="التسجيل"
                         android:textColor="@color/White"
-                        android:textSize="@dimen/font_size_textViews" />
+                        android:textSize="@dimen/font_size_textViews"
+                        android:textStyle="bold"
+                        />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
             <ImageView
@@ -118,7 +120,9 @@
                         android:textSize="@dimen/font_size_textViews"
                         android:inputType="textPassword"
                         android:textAlignment="center"
-                        android:background="@color/White" />
+                        android:background="@color/White"
+
+                        />
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
@@ -153,6 +157,7 @@
                         android:textAlignment="center"
                         android:textColor="@color/White"
                         android:textSize="@dimen/font_size_textViews"
+                        android:textStyle="bold"
                         />
                 </RelativeLayout>
 

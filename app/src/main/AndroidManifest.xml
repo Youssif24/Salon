@@ -55,8 +55,7 @@
             android:label="حجز ميعاد " />
         <activity
             android:name=".SalonDetails"
-            android:label="عن الصالون"
-            />
+            android:label="عن الصالون" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -71,8 +70,7 @@
 
         <activity
             android:name=".UserProfile"
-            android:label="إعدادات"
-             />
+            android:label="إعدادات" />
         <activity
             android:name=".UpdatePassword"
             android:label="تغيير كلمة المرور"
@@ -99,9 +97,14 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".InformationShow"
-            android:theme="@android:style/Theme.Holo.Light.Dialog"
-            ></activity>
+        <activity
+            android:name=".InformationShow"
+            android:theme="@android:style/Theme.Holo.Light.Dialog" />
+        <activity
+            android:name=".SuggestionActivity"
+            android:label="إقتراحات"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".UploadingSuggestion"></activity>
     </application>
 
 </manifest>

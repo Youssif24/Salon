@@ -49,20 +49,19 @@
 
 
                 <TextView
-                    android:id="@+id/dateTv"
+                    android:id="@+id/sug_usernameTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15sp"
+                    android:textSize="20sp"
                     android:layout_gravity="right"
                     android:gravity="right"
-                    android:text="25-1-2018"
+                    android:text="يوسف سعد"
                     android:paddingRight="3dp"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_toRightOf="@+id/textViewOptions"
-                    android:layout_toEndOf="@+id/textViewOptions" />
+                     />
 
 
             </RelativeLayout>
@@ -70,7 +69,7 @@
 
 
             <TextView
-                android:id="@+id/tvDetails"
+                android:id="@+id/sug_detailsTv"
                 android:textSize="@dimen/font_size_textViews"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -78,43 +77,11 @@
                 android:gravity="center"
                 android:textAlignment="center"
                 android:paddingRight="5dp"
-                android:text="عايز احجز بكرا ان شاء الله"
+                android:text="المكان اكثر من رائع"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/black"
                 />
-            <LinearLayout
-                android:orientation="vertical"
-                android:id="@+id/user_response_show_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="رد الادمن : "
-                    android:textSize="@dimen/font_size_textViews"
-                    android:textColor="#10bbb3"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginRight="5dp"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/reply_showTv"
-                    android:layout_marginBottom="5dp"
-                    android:layout_marginRight="5dp"
-                    android:text="welcome"
-                    android:layout_gravity="right"
-                    android:gravity="right"
-                    android:textSize="@dimen/font_size_textViews"
-                    />
-
-
-            </LinearLayout>
-
-
-
 
             <LinearLayout
                 android:id="@+id/adminControlsLayout"
@@ -126,28 +93,8 @@
                 android:layout_marginTop="15dp"
                 >
 
-
-
-                <ImageView
-                    android:id="@+id/request_cancel_imgView"
-                    android:layout_width="60dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/dlte"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="right"
-
-                    />
-                <ImageView
-                    android:id="@+id/request_reply_imgView"
-                    android:layout_width="60dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/accpt"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="right"
-                    />
-
                 <TextView
-                    android:id="@+id/timeTv"
+                    android:id="@+id/sug_timeTv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="15sp"

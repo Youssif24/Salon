@@ -58,8 +58,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Reques
         String response=request.getResponse();
         if(response.equals(""))
         {
+            holder.tvResponse.setText(" لم يتم الرد ");
             request.setResponse(" لم يتم الرد ");
-           //holder.tvResponse.setText();
         }
 
 
@@ -71,6 +71,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Reques
             holder.canceImg.setVisibility(View.GONE);
             holder.textViewOption.setVisibility(View.GONE);
             //holder.itemControlLayout.setVisibility(View.GONE);
+        }
+        else
+        {
+            holder.replyShowLayout.setVisibility(View.GONE);
         }
         holder.setClickListener(new RecyclerViewClickListener() {
             @Override
@@ -176,24 +180,24 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Reques
         return requestsList.size();
     }
 
-    public class RequestViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public static class RequestViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private RecyclerViewClickListener clickListener;
         TextView tvName;
         TextView tvDesc,tvDate,tvTime,tvResponse,textViewOption;
-        LinearLayout itemControlLayout;
+        LinearLayout itemControlLayout,replyShowLayout;
         MainActivity mainActivity;
         ImageView replyImg,canceImg;
         public RequestViewHolder(View item,MainActivity mainActivity) {
             super(item);
             item.setOnClickListener(this);
             this.mainActivity=mainActivity;
-            //tvName = (TextView) item.findViewById(R.id.tvName);
            tvDesc = (TextView) item.findViewById(R.id.tvDetails);
             tvDate = (TextView) item.findViewById(R.id.dateTv);
             tvTime=(TextView)item.findViewById(R.id.timeTv);
             textViewOption=(TextView)item.findViewById(R.id.textViewOptions);
-            //tvResponse=(TextView)item.findViewById(R.id.replyTv);
+            tvResponse=(TextView)item.findViewById(R.id.reply_showTv);
             itemControlLayout=(LinearLayout)item.findViewById(R.id.adminControlsLayout);
+            replyShowLayout=(LinearLayout)item.findViewById(R.id.user_response_show_layout);
             replyImg=(ImageView)item.findViewById(R.id.request_reply_imgView);
             canceImg=(ImageView)item.findViewById(R.id.request_cancel_imgView);
             itemControlLayout.setOnClickListener(this);
